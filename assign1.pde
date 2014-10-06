@@ -25,7 +25,7 @@ void setup() {
   machine = new SlotMachine();
 }
 
-void draw() {
+void draw() { 
   background(245,229,124);
   fill(64,162,171);
   rect(320,248,396,154,25);
