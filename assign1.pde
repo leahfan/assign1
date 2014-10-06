@@ -7,10 +7,15 @@ int y = 440;
 int w = 150;
 int h = 50;
 
+
 // declare variables
 // --------------------------------------------
 // put your code inside here
-int totalScore = 0;
+int totalScore = 500;
+//a=first fruit b=second fruit c=thrid fruit
+int a;
+int b;
+int c;
 
 // --------------------------------------------
 
@@ -62,7 +67,30 @@ void draw() {
       // stop rolling
       // -------------------------------------------------
       // put your code inside here
-      
+       a=int(random(6));
+        b=int(random(6));
+        c=int(random(6));
+       
+       machine.setSlotFruit(0,a);
+       machine.setSlotFruit(1,b);
+       machine.setSlotFruit(2,c);
+       
+       int sn=machine.getFruitCount(0);
+       int on=machine.getFruitCount(1);
+       int cn=machine.getFruitCount(2);
+       int ln=machine.getFruitCount(3);
+       int wn=machine.getFruitCount(4);
+       int bn=machine.getFruitCount(5);
+       
+       
+       int ss=machine.getSlotScore(0);
+       int os=machine.getSlotScore(1);
+       int cs=machine.getSlotScore(2);
+       int ls=machine.getSlotScore(3);
+       int ws=machine.getSlotScore(4);
+       int bs=machine.getSlotScore(5);
+ 
+      totalScore+=sn*ss+on*os+cn*cs+ln*ls+wn*ws+bn*bs;
  
  
  
